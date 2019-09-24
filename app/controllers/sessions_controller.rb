@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
     else
       session[:name] = params[:name]
       redirect_to '/show'
+    end
   end
 
   def destroy
