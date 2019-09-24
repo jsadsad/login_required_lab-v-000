@@ -13,6 +13,6 @@ class SessionsController < ApplicationController
 
   private
   def invalid_session?
-    params[:name].nil? || params[:name].empty?
+    params[:name].nil? || params[:name].blank?
   end
 end
