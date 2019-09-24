@@ -12,12 +12,12 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session.destroy :name if session[:name]
+    session.destroy :name
   end
 
   private
   def invalid_session?
     params[:name].nil? || params[:name].blank?
   end
-  
+
 end
