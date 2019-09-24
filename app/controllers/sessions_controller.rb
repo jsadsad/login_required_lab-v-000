@@ -3,8 +3,11 @@ class SessionsController < ApplicationController
   end
 
   def create
-    session[:name] = params[:name]
-    redirect to '/'
+    if invalid_session?
+      redirect to '/'
+    else
+      session[:name] = params[:name]
+      redirect_to '/show'
   end
 
   def destroy
