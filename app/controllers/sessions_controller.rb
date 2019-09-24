@@ -10,4 +10,9 @@ class SessionsController < ApplicationController
   def destroy
     session.destroy :name
   end
+
+  private
+  def invalid_session?
+    params[:name].nil? || params[:name].empty?
+  end
 end
