@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
 
   def create
     if invalid_session?
-      redirect to '/'
+      redirect_to '/'
     else
       session[:name] = params[:name]
       redirect_to '/show'
